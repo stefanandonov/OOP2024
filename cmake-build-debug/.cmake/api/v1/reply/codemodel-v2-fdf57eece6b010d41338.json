@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "OOP_2024",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "OOP_2024::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OOP_2024-Debug-c11ac434c75c4830916a.json",
+					"name" : "OOP_2024",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task1-Debug-f16619d2cf9cb37f7d06.json",
+					"name" : "task1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task2-Debug-eaa05c281d7ba6bf3911.json",
+					"name" : "task2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task3-Debug-9ba41cb9ee742b30773e.json",
+					"name" : "task3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task4-Debug-51d11b0288c9bd40fc12.json",
+					"name" : "task4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task5-Debug-a26f753d0670ab3328ae.json",
+					"name" : "task5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "task6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-task6-Debug-3b4e364cd7c2a659e469.json",
+					"name" : "task6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zad1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zad1-Debug-c9517e01e48ae05f998a.json",
+					"name" : "zad1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zad2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zad2-Debug-72c36fe77d0e613043af.json",
+					"name" : "zad2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zad3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zad3-Debug-dacdef124ac275b9474c.json",
+					"name" : "zad3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zad4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zad4-Debug-6648a67fff95652e905c.json",
+					"name" : "zad4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zad5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zad5-Debug-c72e8f735c1a084db840.json",
+					"name" : "zad5",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug",
+		"source" : "/Users/stefanandonov/CLionProjects/OOP_2024"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
