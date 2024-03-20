@@ -12,9 +12,9 @@ add_executable(zad4 mk/av1/zad4.cpp)
 add_executable(zad5 mk/av1/zad5.cpp)
 
 
-add_executable(task1 en/ex2/task1.cpp)
-add_executable(task2 en/ex2/task2.cpp)
-add_executable(task3 en/ex2/task3.cpp)
+add_executable(task1 en/ex4/task1.cpp)
+add_executable(task2 en/ex4/task2.cpp)
+add_executable(task3 en/ex4/task3.cpp)
 add_executable(task4 en/ex1/task4.cpp)
 add_executable(task5 en/ex1/task5.cpp)
 add_executable(task6 en/ex1/task6.cpp)
