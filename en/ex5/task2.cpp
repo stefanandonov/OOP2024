@@ -59,21 +59,56 @@ public:
 
     Array &operator+=(int number) {
         if (size == capacity) {
-            //TODO increment the capacity
             int *tmp = new int[2 * capacity];
             capacity *= 2;
             for (int i = 0; i < size; i++) {
-                tmp[i]=content[i];
+                tmp[i] = content[i];
             }
-            delete [] content;
+            delete[] content;
             content = tmp;
 
         }
         content[size] = number;
         size++;
 
+        return *this;
+    }
+
+
+    Array &operator-=(int number) {
+        int *tmp = new int[capacity];
+        int j = 0;
+        for (int i = 0; i < size; i++) {
+            if (content[i] != number) {
+                tmp[j] = content[i];
+                ++j;
+            }
+        }
+
+        size = j;
+
+        delete[] content;
+        content = tmp;
 
         return *this;
+    }
+
+    int &operator[](int idx) {
+        return content[idx];
+    }
+
+    bool operator==(const Array &other) {
+        if (this->size != other.size) {
+            return false;
+        }
+
+        for (int i = 0; i < this->size; i++) {
+            if (this->content[i]!=other.content[i]){
+                return false;
+            }
+        }
+        
+        return true;
     }
 
 
@@ -85,13 +120,24 @@ int main() {
     cout << a;
 
     for (int i = 1; i <= 100; i++) {
-        a += i;
+        a += (i % 5);
     }
 
     cout << a;
 
     b = a;
     cout << b;
+
+    a -= 1;
+    cout << a;
+
+    a[5]++;
+
+    cout << a;
+
+    cout << (a==a);
+
+
 
 //    a = b;
 //    a = a;

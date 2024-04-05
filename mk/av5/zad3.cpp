@@ -32,6 +32,17 @@ public:
         copy(other);
     }
 
+    Student & operator++(){
+        ++year;
+        return *this;
+    }
+
+    Student operator++ (int){
+        Student copy(*this);
+        ++year;
+        return copy;
+    }
+
     Student &operator=(const Student &other) {
         if (this != &other) {
             delete[] name;
@@ -41,45 +52,93 @@ public:
         return *this;
     }
 
+    ~Student() {
+        delete[] name;
+    }
+
     friend ostream &operator<<(ostream &out, const Student &s) {
-        return out << s.name << " " << s.year << " " << s.average << endl;
+        return out << s.name << " " << s.year << " " << s.average;
+    }
+
+    bool operator<(const Student &rhs) const {
+        return average < rhs.average;
+    }
+
+    bool operator>(const Student &rhs) const {
+        return rhs < *this;
+    }
+
+    bool operator<=(const Student &rhs) const {
+        return !(rhs < *this);
+    }
+
+    bool operator>=(const Student &rhs) const {
+        return !(*this < rhs);
     }
 };
 
-class Course {
+class Faculty {
     char name[50];
     Student *students;
     int count;
-    int capacity;
 public:
-    Course(char *name = "", int capacity = 10) {
+    Faculty(char *name = "") {
         strcpy(this->name, name);
-        this->capacity = capacity;
-        students = new Student[this->capacity];
+        students = new Student[0];
         count = 0;
     }
 
-    Course &operator+=(Student &other) {
-        if (count == capacity) {
-            Student *tmp = new Student[2 * capacity];
-            capacity *= 2;
-            for (int i = 0; i < count; i++) {
-                tmp[i]=students[i];
-            }
-            delete [] students;
-            students = tmp;
-        }
+    Faculty &operator+=(Student &newStudent) {
 
-        students[count]=other;
-        count++;
+        Student *tmp = new Student[count + 1];
+        for (int i = 0; i < count; i++) {
+            tmp[i] = students[i];
+        }
+        tmp[count] = newStudent;
+        ++count;
+        delete[] students;
+        students = tmp;
 
         return *this;
     }
+
+    friend ostream &operator<<(ostream &out, const Faculty &f) {
+        out << f.name << endl;
+        out << f.count << endl;
+        for (int i = 0; i < f.count; i++) {
+            out << f.students[i] << endl;
+        }
+        return out;
+    }
+
+    Faculty & operator++(){
+        for (int i=0;i<count;i++){
+            ++students[i];
+        }
+        return *this;
+    }
+
+
 };
 
 int main() {
     Student s("Stefan", 8.0, 4);
+    Student s2("Petko", 9.0, 2);
 
-    cout << s << endl;
+    cout << s2++ << endl;
+
+    Faculty f ("FINKI");
+
+    f+=s;
+    f+=s2;
+
+    cout << f;
+
+//    int x = 5;
+//    cout << ++x << endl;
+//    cout << x++ << endl;
+//    cout << x << endl;
+
+
     return 0;
 }
