@@ -56,9 +56,9 @@ public:
         delete[] name;
     }
 
-    friend ostream &operator<<(ostream &out, const Student &s) {
-        return out << s.name << " " << s.year << " " << s.average;
-    }
+//    friend ostream &operator<<(ostream &out, const Student &s) {
+//        return out << s.name << " " << s.year << " " << s.average;
+//    }
 
     bool operator<(const Student &rhs) const {
         return average < rhs.average;
