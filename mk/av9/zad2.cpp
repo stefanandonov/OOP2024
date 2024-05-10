@@ -65,7 +65,7 @@ public:
 
 class JetCar : public Jet, public Car {
 public:
-    JetCar(int a = 1) {
+    JetCar(int acceleration1, int a) {
         this->acceleration = a;
         cout << "JETCAR CONSTRUCTOR" << endl;
     }
@@ -89,7 +89,7 @@ int main() {
     vehicle[0] = new Vehicle();
     vehicle[1] = new Car (5);
     vehicle[2] = new Jet (200);
-    vehicle[3] = new JetCar(50);
+    vehicle[3] = new JetCar(0, 50);
 
 
     for (int i=0;i<4;i++){
