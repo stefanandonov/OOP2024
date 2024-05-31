@@ -12,7 +12,7 @@ protected:
     string name;
     int price;
 public:
-    Product(const string &name, int price) : name(name), price(price) {}
+    Product(const string &name = "", int price = 1) : name(name), price(price) {}
 
 };
 
@@ -34,7 +34,7 @@ class FoodProduct : public Product, public Discountable {
 public:
     FoodProduct(const string &name, int price, int calories) : Product(name, price), calories(calories) {}
 
-    int getPrice() override {
+    int getPrice()  {
         return price;
     }
 

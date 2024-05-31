@@ -67,7 +67,7 @@ public:
         if (this != &b) {
 
             strcpy(this->name, b.name);
-            this->books=b.books;
+            this->books = b.books;
         }
         return *this;
     }
@@ -81,7 +81,7 @@ public:
     }
 
     bool operator>(const BookStore &b) {
-        return this->books.size() > b.books.size();
+        return books.size() > b.books.size();
     }
 
     BookStore &operator+=(const Book &a) {
@@ -90,6 +90,7 @@ public:
                 return *this;
             }
         }
+
         books.push_back(a);
         return *this;
     }
@@ -97,17 +98,16 @@ public:
     void createMarketPrice() {
         for (int i = 0; i < books.size(); i++) {
             if (books[i].getType() == academic) {
-                float fee = books[i].getPrice() * 0.05f;
+                float fee = books[i].getPrice() * 0.05;
                 books[i] += fee;
             } else {
-                float fee = books[i].getPrice() * 0.03f;
+                float fee = books[i].getPrice() * 0.03;
                 books[i] += fee;
             }
         }
     }
 
     ~BookStore() {
-//
     }
 };
 

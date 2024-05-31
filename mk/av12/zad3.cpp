@@ -82,17 +82,7 @@ public:
         this->price = price;
     }
 
-    friend ostream &operator<<(ostream &out, Book &b) {
-        out << b.id << " - " << b.title << " ";
-        if (b.type == academic)
-            out << "academic ";
-        else
-            out << "roman ";
-        out << b.price << endl;
-        return out;
-    }
-
-    Book &operator+=(float amount) {
+        Book &operator+=(float amount) {
         price += amount;
         return *this;
     }

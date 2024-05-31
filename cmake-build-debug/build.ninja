@@ -77,11 +77,11 @@ build OOP_2024: CXX_EXECUTABLE_LINKER__OOP_2024_Debug CMakeFiles/OOP_2024.dir/ma
 
 build cmake_object_order_depends_target_zad1: phony || CMakeFiles/zad1.dir
 
-build CMakeFiles/zad1.dir/mk/av3/zad1.cpp.o: CXX_COMPILER__zad1_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av3/zad1.cpp || cmake_object_order_depends_target_zad1
-  DEP_FILE = CMakeFiles/zad1.dir/mk/av3/zad1.cpp.o.d
+build CMakeFiles/zad1.dir/mk/av13/zad1.cpp.o: CXX_COMPILER__zad1_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av13/zad1.cpp || cmake_object_order_depends_target_zad1
+  DEP_FILE = CMakeFiles/zad1.dir/mk/av13/zad1.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/zad1.dir
-  OBJECT_FILE_DIR = CMakeFiles/zad1.dir/mk/av3
+  OBJECT_FILE_DIR = CMakeFiles/zad1.dir/mk/av13
 
 
 # =============================================================================
@@ -91,7 +91,7 @@ build CMakeFiles/zad1.dir/mk/av3/zad1.cpp.o: CXX_COMPILER__zad1_Debug /Users/ste
 #############################################
 # Link the executable zad1
 
-build zad1: CXX_EXECUTABLE_LINKER__zad1_Debug CMakeFiles/zad1.dir/mk/av3/zad1.cpp.o
+build zad1: CXX_EXECUTABLE_LINKER__zad1_Debug CMakeFiles/zad1.dir/mk/av13/zad1.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/zad1.dir
   POST_BUILD = :
@@ -108,11 +108,11 @@ build zad1: CXX_EXECUTABLE_LINKER__zad1_Debug CMakeFiles/zad1.dir/mk/av3/zad1.cp
 
 build cmake_object_order_depends_target_zad2: phony || CMakeFiles/zad2.dir
 
-build CMakeFiles/zad2.dir/mk/av3/zad2.cpp.o: CXX_COMPILER__zad2_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av3/zad2.cpp || cmake_object_order_depends_target_zad2
-  DEP_FILE = CMakeFiles/zad2.dir/mk/av3/zad2.cpp.o.d
+build CMakeFiles/zad2.dir/mk/av13/zad2.cpp.o: CXX_COMPILER__zad2_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av13/zad2.cpp || cmake_object_order_depends_target_zad2
+  DEP_FILE = CMakeFiles/zad2.dir/mk/av13/zad2.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/zad2.dir
-  OBJECT_FILE_DIR = CMakeFiles/zad2.dir/mk/av3
+  OBJECT_FILE_DIR = CMakeFiles/zad2.dir/mk/av13
 
 
 # =============================================================================
@@ -122,7 +122,7 @@ build CMakeFiles/zad2.dir/mk/av3/zad2.cpp.o: CXX_COMPILER__zad2_Debug /Users/ste
 #############################################
 # Link the executable zad2
 
-build zad2: CXX_EXECUTABLE_LINKER__zad2_Debug CMakeFiles/zad2.dir/mk/av3/zad2.cpp.o
+build zad2: CXX_EXECUTABLE_LINKER__zad2_Debug CMakeFiles/zad2.dir/mk/av13/zad2.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/zad2.dir
   POST_BUILD = :
@@ -139,11 +139,11 @@ build zad2: CXX_EXECUTABLE_LINKER__zad2_Debug CMakeFiles/zad2.dir/mk/av3/zad2.cp
 
 build cmake_object_order_depends_target_zad3: phony || CMakeFiles/zad3.dir
 
-build CMakeFiles/zad3.dir/mk/av3/zad3.cpp.o: CXX_COMPILER__zad3_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av3/zad3.cpp || cmake_object_order_depends_target_zad3
-  DEP_FILE = CMakeFiles/zad3.dir/mk/av3/zad3.cpp.o.d
+build CMakeFiles/zad3.dir/mk/av12/zad3.cpp.o: CXX_COMPILER__zad3_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av12/zad3.cpp || cmake_object_order_depends_target_zad3
+  DEP_FILE = CMakeFiles/zad3.dir/mk/av12/zad3.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/zad3.dir
-  OBJECT_FILE_DIR = CMakeFiles/zad3.dir/mk/av3
+  OBJECT_FILE_DIR = CMakeFiles/zad3.dir/mk/av12
 
 
 # =============================================================================
@@ -153,7 +153,7 @@ build CMakeFiles/zad3.dir/mk/av3/zad3.cpp.o: CXX_COMPILER__zad3_Debug /Users/ste
 #############################################
 # Link the executable zad3
 
-build zad3: CXX_EXECUTABLE_LINKER__zad3_Debug CMakeFiles/zad3.dir/mk/av3/zad3.cpp.o
+build zad3: CXX_EXECUTABLE_LINKER__zad3_Debug CMakeFiles/zad3.dir/mk/av12/zad3.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/zad3.dir
   POST_BUILD = :
@@ -170,11 +170,11 @@ build zad3: CXX_EXECUTABLE_LINKER__zad3_Debug CMakeFiles/zad3.dir/mk/av3/zad3.cp
 
 build cmake_object_order_depends_target_zad4: phony || CMakeFiles/zad4.dir
 
-build CMakeFiles/zad4.dir/mk/av1/zad4.cpp.o: CXX_COMPILER__zad4_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av1/zad4.cpp || cmake_object_order_depends_target_zad4
-  DEP_FILE = CMakeFiles/zad4.dir/mk/av1/zad4.cpp.o.d
+build CMakeFiles/zad4.dir/mk/av12/zad4.cpp.o: CXX_COMPILER__zad4_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av12/zad4.cpp || cmake_object_order_depends_target_zad4
+  DEP_FILE = CMakeFiles/zad4.dir/mk/av12/zad4.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/zad4.dir
-  OBJECT_FILE_DIR = CMakeFiles/zad4.dir/mk/av1
+  OBJECT_FILE_DIR = CMakeFiles/zad4.dir/mk/av12
 
 
 # =============================================================================
@@ -184,7 +184,7 @@ build CMakeFiles/zad4.dir/mk/av1/zad4.cpp.o: CXX_COMPILER__zad4_Debug /Users/ste
 #############################################
 # Link the executable zad4
 
-build zad4: CXX_EXECUTABLE_LINKER__zad4_Debug CMakeFiles/zad4.dir/mk/av1/zad4.cpp.o
+build zad4: CXX_EXECUTABLE_LINKER__zad4_Debug CMakeFiles/zad4.dir/mk/av12/zad4.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/zad4.dir
   POST_BUILD = :
@@ -201,11 +201,11 @@ build zad4: CXX_EXECUTABLE_LINKER__zad4_Debug CMakeFiles/zad4.dir/mk/av1/zad4.cp
 
 build cmake_object_order_depends_target_zad5: phony || CMakeFiles/zad5.dir
 
-build CMakeFiles/zad5.dir/mk/av1/zad5.cpp.o: CXX_COMPILER__zad5_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av1/zad5.cpp || cmake_object_order_depends_target_zad5
-  DEP_FILE = CMakeFiles/zad5.dir/mk/av1/zad5.cpp.o.d
+build CMakeFiles/zad5.dir/mk/av12/zad5.cpp.o: CXX_COMPILER__zad5_Debug /Users/stefanandonov/CLionProjects/OOP_2024/mk/av12/zad5.cpp || cmake_object_order_depends_target_zad5
+  DEP_FILE = CMakeFiles/zad5.dir/mk/av12/zad5.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/zad5.dir
-  OBJECT_FILE_DIR = CMakeFiles/zad5.dir/mk/av1
+  OBJECT_FILE_DIR = CMakeFiles/zad5.dir/mk/av12
 
 
 # =============================================================================
@@ -215,7 +215,7 @@ build CMakeFiles/zad5.dir/mk/av1/zad5.cpp.o: CXX_COMPILER__zad5_Debug /Users/ste
 #############################################
 # Link the executable zad5
 
-build zad5: CXX_EXECUTABLE_LINKER__zad5_Debug CMakeFiles/zad5.dir/mk/av1/zad5.cpp.o
+build zad5: CXX_EXECUTABLE_LINKER__zad5_Debug CMakeFiles/zad5.dir/mk/av12/zad5.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/zad5.dir
   POST_BUILD = :
@@ -232,11 +232,11 @@ build zad5: CXX_EXECUTABLE_LINKER__zad5_Debug CMakeFiles/zad5.dir/mk/av1/zad5.cp
 
 build cmake_object_order_depends_target_task1: phony || CMakeFiles/task1.dir
 
-build CMakeFiles/task1.dir/en/ex2/task1.cpp.o: CXX_COMPILER__task1_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex2/task1.cpp || cmake_object_order_depends_target_task1
-  DEP_FILE = CMakeFiles/task1.dir/en/ex2/task1.cpp.o.d
+build CMakeFiles/task1.dir/en/ex13/task1.cpp.o: CXX_COMPILER__task1_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex13/task1.cpp || cmake_object_order_depends_target_task1
+  DEP_FILE = CMakeFiles/task1.dir/en/ex13/task1.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/task1.dir
-  OBJECT_FILE_DIR = CMakeFiles/task1.dir/en/ex2
+  OBJECT_FILE_DIR = CMakeFiles/task1.dir/en/ex13
 
 
 # =============================================================================
@@ -246,7 +246,7 @@ build CMakeFiles/task1.dir/en/ex2/task1.cpp.o: CXX_COMPILER__task1_Debug /Users/
 #############################################
 # Link the executable task1
 
-build task1: CXX_EXECUTABLE_LINKER__task1_Debug CMakeFiles/task1.dir/en/ex2/task1.cpp.o
+build task1: CXX_EXECUTABLE_LINKER__task1_Debug CMakeFiles/task1.dir/en/ex13/task1.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/task1.dir
   POST_BUILD = :
@@ -263,11 +263,11 @@ build task1: CXX_EXECUTABLE_LINKER__task1_Debug CMakeFiles/task1.dir/en/ex2/task
 
 build cmake_object_order_depends_target_task2: phony || CMakeFiles/task2.dir
 
-build CMakeFiles/task2.dir/en/ex2/task2.cpp.o: CXX_COMPILER__task2_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex2/task2.cpp || cmake_object_order_depends_target_task2
-  DEP_FILE = CMakeFiles/task2.dir/en/ex2/task2.cpp.o.d
+build CMakeFiles/task2.dir/en/ex13/task2.cpp.o: CXX_COMPILER__task2_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex13/task2.cpp || cmake_object_order_depends_target_task2
+  DEP_FILE = CMakeFiles/task2.dir/en/ex13/task2.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/task2.dir
-  OBJECT_FILE_DIR = CMakeFiles/task2.dir/en/ex2
+  OBJECT_FILE_DIR = CMakeFiles/task2.dir/en/ex13
 
 
 # =============================================================================
@@ -277,7 +277,7 @@ build CMakeFiles/task2.dir/en/ex2/task2.cpp.o: CXX_COMPILER__task2_Debug /Users/
 #############################################
 # Link the executable task2
 
-build task2: CXX_EXECUTABLE_LINKER__task2_Debug CMakeFiles/task2.dir/en/ex2/task2.cpp.o
+build task2: CXX_EXECUTABLE_LINKER__task2_Debug CMakeFiles/task2.dir/en/ex13/task2.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/task2.dir
   POST_BUILD = :
@@ -294,11 +294,11 @@ build task2: CXX_EXECUTABLE_LINKER__task2_Debug CMakeFiles/task2.dir/en/ex2/task
 
 build cmake_object_order_depends_target_task3: phony || CMakeFiles/task3.dir
 
-build CMakeFiles/task3.dir/en/ex2/task3.cpp.o: CXX_COMPILER__task3_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex2/task3.cpp || cmake_object_order_depends_target_task3
-  DEP_FILE = CMakeFiles/task3.dir/en/ex2/task3.cpp.o.d
+build CMakeFiles/task3.dir/en/ex12/task3.cpp.o: CXX_COMPILER__task3_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex12/task3.cpp || cmake_object_order_depends_target_task3
+  DEP_FILE = CMakeFiles/task3.dir/en/ex12/task3.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/task3.dir
-  OBJECT_FILE_DIR = CMakeFiles/task3.dir/en/ex2
+  OBJECT_FILE_DIR = CMakeFiles/task3.dir/en/ex12
 
 
 # =============================================================================
@@ -308,7 +308,7 @@ build CMakeFiles/task3.dir/en/ex2/task3.cpp.o: CXX_COMPILER__task3_Debug /Users/
 #############################################
 # Link the executable task3
 
-build task3: CXX_EXECUTABLE_LINKER__task3_Debug CMakeFiles/task3.dir/en/ex2/task3.cpp.o
+build task3: CXX_EXECUTABLE_LINKER__task3_Debug CMakeFiles/task3.dir/en/ex12/task3.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/task3.dir
   POST_BUILD = :
@@ -325,11 +325,11 @@ build task3: CXX_EXECUTABLE_LINKER__task3_Debug CMakeFiles/task3.dir/en/ex2/task
 
 build cmake_object_order_depends_target_task4: phony || CMakeFiles/task4.dir
 
-build CMakeFiles/task4.dir/en/ex1/task4.cpp.o: CXX_COMPILER__task4_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex1/task4.cpp || cmake_object_order_depends_target_task4
-  DEP_FILE = CMakeFiles/task4.dir/en/ex1/task4.cpp.o.d
+build CMakeFiles/task4.dir/en/ex12/task4.cpp.o: CXX_COMPILER__task4_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex12/task4.cpp || cmake_object_order_depends_target_task4
+  DEP_FILE = CMakeFiles/task4.dir/en/ex12/task4.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/task4.dir
-  OBJECT_FILE_DIR = CMakeFiles/task4.dir/en/ex1
+  OBJECT_FILE_DIR = CMakeFiles/task4.dir/en/ex12
 
 
 # =============================================================================
@@ -339,7 +339,7 @@ build CMakeFiles/task4.dir/en/ex1/task4.cpp.o: CXX_COMPILER__task4_Debug /Users/
 #############################################
 # Link the executable task4
 
-build task4: CXX_EXECUTABLE_LINKER__task4_Debug CMakeFiles/task4.dir/en/ex1/task4.cpp.o
+build task4: CXX_EXECUTABLE_LINKER__task4_Debug CMakeFiles/task4.dir/en/ex12/task4.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/task4.dir
   POST_BUILD = :
@@ -356,11 +356,11 @@ build task4: CXX_EXECUTABLE_LINKER__task4_Debug CMakeFiles/task4.dir/en/ex1/task
 
 build cmake_object_order_depends_target_task5: phony || CMakeFiles/task5.dir
 
-build CMakeFiles/task5.dir/en/ex1/task5.cpp.o: CXX_COMPILER__task5_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex1/task5.cpp || cmake_object_order_depends_target_task5
-  DEP_FILE = CMakeFiles/task5.dir/en/ex1/task5.cpp.o.d
+build CMakeFiles/task5.dir/en/ex12/task5.cpp.o: CXX_COMPILER__task5_Debug /Users/stefanandonov/CLionProjects/OOP_2024/en/ex12/task5.cpp || cmake_object_order_depends_target_task5
+  DEP_FILE = CMakeFiles/task5.dir/en/ex12/task5.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/task5.dir
-  OBJECT_FILE_DIR = CMakeFiles/task5.dir/en/ex1
+  OBJECT_FILE_DIR = CMakeFiles/task5.dir/en/ex12
 
 
 # =============================================================================
@@ -370,7 +370,7 @@ build CMakeFiles/task5.dir/en/ex1/task5.cpp.o: CXX_COMPILER__task5_Debug /Users/
 #############################################
 # Link the executable task5
 
-build task5: CXX_EXECUTABLE_LINKER__task5_Debug CMakeFiles/task5.dir/en/ex1/task5.cpp.o
+build task5: CXX_EXECUTABLE_LINKER__task5_Debug CMakeFiles/task5.dir/en/ex12/task5.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/task5.dir
   POST_BUILD = :
@@ -409,6 +409,37 @@ build task6: CXX_EXECUTABLE_LINKER__task6_Debug CMakeFiles/task6.dir/en/ex1/task
   TARGET_FILE = task6
   TARGET_PDB = task6.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target playground
+
+
+#############################################
+# Order-only phony target for playground
+
+build cmake_object_order_depends_target_playground: phony || CMakeFiles/playground.dir
+
+build CMakeFiles/playground.dir/playground.cpp.o: CXX_COMPILER__playground_Debug /Users/stefanandonov/CLionProjects/OOP_2024/playground.cpp || cmake_object_order_depends_target_playground
+  DEP_FILE = CMakeFiles/playground.dir/playground.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/playground.dir
+  OBJECT_FILE_DIR = CMakeFiles/playground.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target playground
+
+
+#############################################
+# Link the executable playground
+
+build playground: CXX_EXECUTABLE_LINKER__playground_Debug CMakeFiles/playground.dir/playground.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  OBJECT_DIR = CMakeFiles/playground.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = playground
+  TARGET_PDB = playground.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -443,7 +474,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug
 
-build all: phony OOP_2024 zad1 zad2 zad3 zad4 zad5 task1 task2 task3 task4 task5 task6
+build all: phony OOP_2024 zad1 zad2 zad3 zad4 zad5 task1 task2 task3 task4 task5 task6 playground
 
 # =============================================================================
 # Built-in targets

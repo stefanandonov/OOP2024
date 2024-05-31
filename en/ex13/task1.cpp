@@ -41,12 +41,16 @@ private:
     string title;
     string author;
     int year;
-
 public:
     Book(const string &title = "", const string &author = "", int year = 1900) : title(title), author(author),
                                                                                  year(year) {}
 
-        bool operator==(const Book &rhs) const {
+    friend ostream &operator<<(ostream &os, const Book &book) {
+        os << book.title << " " << book.author << " " << book.year;
+        return os;
+    }
+
+    bool operator==(const Book &rhs) const {
         return title == rhs.title &&
                author == rhs.author &&
                year == rhs.year;
@@ -56,9 +60,7 @@ public:
         return !(rhs == *this);
     }
 
-    string &getAuthor() {
-        return author;
-    }
+    friend class Library;
 };
 
 class BookAlreadyExistsException {
@@ -69,19 +71,19 @@ public:
         this->b = b;
     }
 
-public:
     void message() {
-        //Book "[BOOK INFO]" already exists in the library
-
         cout << "Book \"" << b << "\" already exists in the library" << endl;
+
     }
+
+
 };
 
 class Library {
 private:
     string name;
-    Book *books;
     int n;
+    Book *books;
 public:
     Library(const string &name = "") {
         this->name = name;
@@ -102,7 +104,7 @@ public:
             tmp[i] = books[i];
         }
         tmp[n] = b;
-        n++;
+        ++n;
         delete[] books;
         books = tmp;
 
@@ -117,28 +119,35 @@ public:
         return out;
     }
 
-    Book *getBooksByAuthor(string &author, int &numberFound) {
+    ~Library() {
+        delete[] books;
+    }
 
+    Book *getBooksByAuthor(string & author, int & numberFound){
         numberFound = 0;
-        for (int i = 0; i < n; i++) {
-            if (books[i].getAuthor() == author) {
+
+        for (int i=0;i<n;i++){
+            if (books[i].author==author){
                 ++numberFound;
             }
         }
 
-        Book *result = new Book[numberFound];
-        int j = 0;
-        for (int i = 0; i < n; i++) {
-            if (books[i].getAuthor() == author) {
-                result[j++] = books[i];
+        if (numberFound==0){
+            return nullptr;
+        }
+
+        Book * result = new Book[numberFound];
+        int j=0;
+
+        for (int i=0;i<n;i++){
+            if (books[i].author==author){
+                result[j] = books[i];
+                j++;
             }
         }
 
-        if (numberFound == 0) {
-            return nullptr;
-        } else {
-            return result;
-        }
+        return result;
+
     }
 };
 
@@ -146,69 +155,46 @@ public:
 int main() {
 
 
-    wtf(); //ja kreira datotekata input.txt
+    wtf();
 
 
     //YOUR CODE STARTS HERE
 
-    /*
-     *  FINKI Library
-        5
-        To Kill a Mockingbird
-        Harper Lee
-        1960
-        1984
-        George Orwell
-        1949
-        The Great Gatsby
-        F. Scott Fitzgerald
-        1925
-        Pride and Prejudice
-        Jane Austen
-        1813
-        Moby Dick
-        Herman Melville
-        1851
-     * */
-
-    ifstream ifs("input.txt");
+    ifstream in("input.txt");
 
     string libraryName;
-    getline(ifs, libraryName);
+    getline(in, libraryName);
+
+    int n;
+    in >> n;
+
+    in.ignore();
 
     Library library(libraryName);
 
-    int n;
-    ifs >> n;
-
-    ifs.ignore();
-
-
-    string t, a;
+    string title, auth;
     int year;
-
     for (int i = 0; i < n; i++) {
-        getline(ifs, t);
-        getline(ifs, a);
-        ifs >> year;
-        ifs.ignore();
+        getline(in, title);
+        getline(in, auth);
+        in >> year;
+        in.ignore();
 
-//        cout << t << " " << a << " " << year << endl;
-
-        Book b(t, a, year);
+//        cout << title << " " << auth << " " << year << endl;
+        Book b(title, auth, year);
         try {
             library += b;
-        }
-        catch (BookAlreadyExistsException &e) {
+        } catch (BookAlreadyExistsException &e) {
             e.message();
         }
     }
 
-    ifs.close();
+    in.close();
 
-    ofstream ofs1("output1.txt");
-    ofs1 << library;
-    ofs1.close();
+    ofstream out("output1.txt");
+    out << library;
+    out.close();
+
 
 
     //DO NOT MODIFY THE NEXT PART
@@ -218,23 +204,19 @@ int main() {
 
     //DO NOT MODIFY THE PART ABOVE, CONTINUE AFTER THIS COMMENT
 
-    ofstream ofs2("output2.txt");
+    out = ofstream("output2.txt");
+    int num;
+    Book * result = library.getBooksByAuthor(author, num);
 
-
-
-
-    Book *result = library.getBooksByAuthor(author, n);
-
-    if (result == nullptr) {
-        ofs2 << "None";
+    if (num==0){
+        out << "None" << endl;
     } else {
-        for (int i = 0; i < n; i++) {
-            ofs2 << result[i] << endl;
+        for (int i=0;i<num;i++){
+            out << result[i] << endl;
         }
     }
 
-    ofs2.close();
-
+    out.close();
 
 
     //YOUR CODE ENDS HERE

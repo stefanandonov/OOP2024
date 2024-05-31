@@ -1,7 +1,85 @@
 #include <iostream>
 #include <cstring>
-#include <vector>
-#include <algorithm>
+
+using namespace std;
+
+class ElementAlreadyExistsException {
+public:
+    void message() {
+        cout << "Element already exists!" << endl;
+    }
+};
+
+template<typename T>
+class List {
+private:
+    T *array;
+    int n;
+
+    void copy(const List<T> &other) {
+        this->n = other.n;
+        this->array = new T[this->n];
+        for (int i = 0; i < this->n; i++) {
+            this->array[i] = other.array[i];
+        }
+    }
+
+public:
+    List() {
+        n = 0;
+        array = new T[n];
+    }
+
+    List(const List<T> &other) {
+        copy(other);
+    }
+
+    List &operator=(const List<T> &other) {
+        if (this != &other) {
+            delete[] array;
+            copy(other);
+        }
+        return *this;
+    }
+
+    List &operator+=(const T &element) {
+        for (int i = 0; i < n; i++) {
+            if (array[i] == element) {
+                throw ElementAlreadyExistsException();
+            }
+        }
+
+
+        T *tmp = new T[n + 1];
+        for (int i = 0; i < n; i++) {
+            tmp[i] = array[i];
+        }
+        tmp[n] = element;
+        n++;
+        delete[] array;
+        array = tmp;
+
+        return *this;
+    }
+
+    friend ostream &operator<<(ostream &out, const List &l) {
+
+        for (int i = 0; i < l.n; i++) {
+            out << l.array[i];
+        }
+
+
+        return out;
+    }
+
+    int getN() {
+        return n;
+    }
+
+    T &operator[](int idx) {
+        return array[idx];
+    }
+};
 
 using namespace std;
 
@@ -33,7 +111,7 @@ public:
         return *this;
     }
 
-    bool isSame(const Book &b) {
+    bool operator==(const Book &b) {
         return id == b.id;
     }
 
@@ -41,7 +119,7 @@ public:
         return type;
     }
 
-    float getPrice() {
+    float getPrice() const {
         return price;
     }
 };
@@ -52,7 +130,7 @@ const int Book::ID_init = 777550;
 class BookStore {
 private:
     char name[20];
-    vector<Book> books;
+    List<Book> books;
 public:
     BookStore(const char *name = "") {
         strcpy(this->name, name);
@@ -65,37 +143,29 @@ public:
 
     BookStore &operator=(const BookStore &b) {
         if (this != &b) {
-
             strcpy(this->name, b.name);
-            this->books=b.books;
+            this->books = b.books;
         }
         return *this;
     }
 
     friend ostream &operator<<(ostream &out, const BookStore &b) {
         out << b.name << endl;
-        for (int i = 0; i < b.books.size(); i++) {
-            out << b.books[i];
-        }
+        out << b.books << endl;
         return out;
     }
 
-    bool operator>(const BookStore &b) {
-        return this->books.size() > b.books.size();
+    bool operator>(BookStore &b) {
+        return books.getN() > b.books.getN();
     }
 
     BookStore &operator+=(const Book &a) {
-        for (int i = 0; i < books.size(); i++) {
-            if (books[i].isSame(a)) {
-                return *this;
-            }
-        }
-        books.push_back(a);
+        this->books += a;
         return *this;
     }
 
     void createMarketPrice() {
-        for (int i = 0; i < books.size(); i++) {
+        for (int i = 0; i < books.getN(); i++) {
             if (books[i].getType() == academic) {
                 float fee = books[i].getPrice() * 0.05f;
                 books[i] += fee;
@@ -106,9 +176,7 @@ public:
         }
     }
 
-    ~BookStore() {
-//
-    }
+
 };
 
 BookStore best(BookStore *books, int n) {
@@ -124,6 +192,8 @@ BookStore best(BookStore *books, int n) {
 int main() {
     int testCase;
     cin >> testCase;
+
+
     if (testCase == 0) {
         cout << "TESTING BOOK CONSTRUCTOR" << endl;
         Book book1("Object-oriented programming", 0, 2300);
@@ -181,7 +251,13 @@ int main() {
         bookStore1 += book2;
         bookStore1 += book3;
         cout << bookStore1;
-        bookStore1 += book1;
+        try {
+            bookStore1 += book1;
+        }
+        catch (ElementAlreadyExistsException & e) {
+            //do nothing
+        }
+
         cout << "TEST PASSED" << endl;
     } else if (testCase == 6) {
         cout << "TESTING BOOKSTORE COPY-CONSTRUCTOR and OPERATOR =" << endl;

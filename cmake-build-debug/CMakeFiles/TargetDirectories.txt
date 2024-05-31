@@ -10,5 +10,6 @@
 /Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug/CMakeFiles/task4.dir
 /Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug/CMakeFiles/task5.dir
 /Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug/CMakeFiles/task6.dir
+/Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug/CMakeFiles/playground.dir
 /Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/stefanandonov/CLionProjects/OOP_2024/cmake-build-debug/CMakeFiles/rebuild_cache.dir

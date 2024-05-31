@@ -16,26 +16,14 @@ protected:
     int likes;
 public:
 
-    Post(const string &username = "", const string &content = "", bool hasPhoto = false, int likes = 0) : username(
-            username),
-                                                                                                          content(content),
-                                                                                                          hasPhoto(
-                                                                                                                  hasPhoto),
-                                                                                                          likes(likes) {}
+    Post(const string &username, const string &content, bool hasPhoto, int likes) : username(username),
+                                                                                    content(content),
+                                                                                    hasPhoto(hasPhoto),
+                                                                                    likes(likes) {}
 
     virtual double popularity() const = 0;
 
-    virtual void print() {
-        cout << "Username: " << username << endl;
-        cout << "Content: " << content << endl;
-        if (hasPhoto) {
-            cout << "With photo" << endl;
-        } else {
-            cout << "Without photo" << endl;
-        }
-
-        cout << "Likes: " << likes;
-    }
+    virtual void print() = 0;
 
     bool operator<(const Post &rhs) const {
         return popularity() < rhs.popularity();
@@ -56,33 +44,41 @@ public:
     friend double mostPopularPostWithPhoto(Post **posts, int n);
 };
 
-
 class FacebookPost : public Post {
 private:
     int shares;
 public:
-    FacebookPost(const string &username = "", const string &content = "", bool hasPhoto = false, int likes = 0,
-                 int shares = 0) : Post(username, content, hasPhoto, likes) {
-        this->shares = shares;
-    }
+    FacebookPost(const string &username, const string &content, bool hasPhoto, int likes, int shares) : Post(username,
+                                                                                                             content,
+                                                                                                             hasPhoto,
+                                                                                                             likes),
+                                                                                                        shares(shares) {}
 
     double popularity() const override {
         double result = likes * shares;
+
         if (hasPhoto) {
             result *= 1.2;
         }
+
         return result;
     }
 
     void print() override {
-
-
         cout << "Facebook post" << endl;
-        Post::print();
-        cout << " Shares: " << shares << endl;
-        cout << "Popularity: " << popularity() << endl;
+        cout << "Username: " << username << endl;
+        cout << "Content: " << content << endl;
+        if (hasPhoto) {
+            cout << "With photo" << endl;
+        } else {
+            cout << "Without photo" << endl;
+        }
 
+        cout << "Likes: " << likes << " Shares: " << shares << endl;
+        cout << "Popularity: " << popularity() << endl;
     }
+
+    friend FacebookPost *fbPostWithMaxShares(Post **posts, int n);
 };
 
 class TwitterPost : public Post {
@@ -90,54 +86,37 @@ private:
     int retweets;
     int replies;
 public:
-    TwitterPost(const string &username = "", const string &content = "", bool hasPhoto = false, int likes = 0,
-                int retweets = 0, int replies = 0) : Post(username, content, hasPhoto, likes), retweets(retweets),
-                                                     replies(replies) {}
+    TwitterPost(const string &username, const string &content, bool hasPhoto, int likes, int retweets, int replies)
+            : Post(username, content, hasPhoto, likes), retweets(retweets), replies(replies) {}
 
     double popularity() const override {
         double result = likes * retweets * replies;
+
         if (hasPhoto) {
-            result *= 1.1;
+            result *= 1.1; //10%
         }
+
         if (content.find("#crypto") != -1) {
-            result *= 1.2;
+            result *= 1.2; //20%
         }
+
         return result;
     }
 
     void print() override {
         cout << "Twitter post" << endl;
-        Post::print();
-        cout << " Retweets: " << retweets << " Replies: " << replies << endl;
+        cout << "Username: " << username << endl;
+        cout << "Content: " << content << endl;
+        if (hasPhoto) {
+            cout << "With photo" << endl;
+        } else {
+            cout << "Without photo" << endl;
+        }
+
+        cout << "Likes: " << likes << " Retweets: " << retweets << " Replies: " << replies << endl;
         cout << "Popularity: " << popularity() << endl;
     }
-
 };
-
-double mostPopularPostWithPhoto(Post **posts, int n) {
-    double max = -1;
-    for (int i = 0; i < n; i++) {
-        if (posts[i]->hasPhoto && posts[i]->popularity() > max) {
-            max = posts[i]->popularity();
-        }
-    }
-    return max;
-}
-
-Post * leastPopularTwitterPost(Post **posts, int n) {
-    Post *leastPopular = nullptr;
-
-    for (int i = 0; i < n; i++) {
-        if (dynamic_cast<TwitterPost *>(posts[i])) {
-            if (leastPopular == nullptr || posts[i]->popularity() < leastPopular->popularity()) {
-                leastPopular = posts[i];
-            }
-        }
-    }
-
-    return leastPopular;
-
-}
 
 Post *readFbPost() {
     string username;
@@ -182,6 +161,31 @@ Post **readMultiplePosts(int *n) {
     return posts;
 }
 
+double mostPopularPostWithPhoto(Post **posts, int n) {
+    double max = -1;
+    for (int i = 0; i < n; i++) {
+        if (posts[i]->hasPhoto && posts[i]->popularity() > max) {
+            max = posts[i]->popularity();
+        }
+    }
+    return max;
+}
+
+FacebookPost *fbPostWithMaxShares(Post **posts, int n) {
+    FacebookPost *result = nullptr;
+
+    for (int i = 0; i < n; i++) {
+        FacebookPost *casted = dynamic_cast<FacebookPost *>(posts[i]);
+        if (casted) {
+            if (result == nullptr || casted->shares > result->shares ) {
+                result = casted;
+            }
+        }
+    }
+
+    return result;
+}
+
 int main() {
     int testCase;
 
@@ -221,14 +225,8 @@ int main() {
             cout << endl;
         }
         cout << "The most popular post with photo has a popularity of: " << mostPopularPostWithPhoto(posts, n) << endl;
-
-        cout << "The least popular twitter post is: " << endl;
-        Post * result = leastPopularTwitterPost(posts,n);
-        if (result== nullptr){
-            cout << "None";
-        } else {
-            result->print();
-        }
+        cout << "The facebook post with most shares is ";
+        fbPostWithMaxShares(posts,n)->print();
     }
 
     return 0;
